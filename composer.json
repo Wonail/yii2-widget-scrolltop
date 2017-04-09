@@ -1,0 +1,34 @@
+{
+    "name": "wonail/yii2-widget-scrolltop",
+    "description": "",
+    "keywords": [
+        "yii2",
+        "wonail",
+        "scrolltop"
+    ],
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "E-Kevin",
+            "email": "e-kevin@qq.com"
+        }
+    ],
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "~2.0",
+        "wonail/yii2-base": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "wonail\\scrolltop\\": ""
+        }
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/Wonail/yii2-base.git"
+        }
+    ]
+}
