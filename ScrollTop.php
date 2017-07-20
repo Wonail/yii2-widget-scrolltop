@@ -3,7 +3,7 @@ namespace wonail\scrolltop;
 
 use rmrevin\yii\fontawesome\component\Icon;
 use rmrevin\yii\fontawesome\FA;
-use wonail\base\AnimateAsset;
+use wonail\base\assetBundle\AnimateAsset;
 use yii\base\Widget;
 use yii\helpers\Html;
 
@@ -51,8 +51,7 @@ class ScrollTop extends Widget
 
     public function registerJs()
     {
-        $view = $this->getView();
-        AnimateAsset::register($view);
+        $this->getView()->registerAssetBundle(AnimateAsset::className());
 //        $js = <<<JS
 //var scrollTop = $("[data-click=scroll-top]");
 //$(document).scroll(function () {
@@ -77,7 +76,7 @@ class ScrollTop extends Widget
 //});
 //JS;
         $js = 'var scrollTop=$("[data-click=scroll-top]");$(document).scroll(function(){var e=$(document).scrollTop();if(e>=200){scrollTop.css("display","block");setTimeout(function(){scrollTop.addClass("in")},100)}else{scrollTop.removeClass("in");setTimeout(function(){scrollTop.css("display","none")},100)}});scrollTop.click(function(e){e.preventDefault();$("html, body").animate({scrollTop:$("body").offset().top},500)});';
-        $view->registerJs($js);
+        $this->getView()->registerJs($js);
     }
 
 }

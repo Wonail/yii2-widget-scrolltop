@@ -1,12 +1,11 @@
 {
     "name": "wonail/yii2-widget-scrolltop",
-    "description": "",
+    "description": "回到顶部小部件",
     "keywords": [
         "yii2",
         "wonail",
         "scrolltop"
     ],
-    "minimum-stability": "dev",
     "authors": [
         {
             "name": "E-Kevin",
@@ -15,20 +14,14 @@
     ],
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
+    "homepage": "https://github.com/Wonail/yii2-widget-scrolltop",
     "require": {
-        "php": ">=5.4.0",
-        "yiisoft/yii2": "~2.0",
-        "wonail/yii2-base": "*"
+        "wonail/yii2-base": "~0.0.1",
+        "rmrevin/yii2-fontawesome": "~2.9"
     },
     "autoload": {
         "psr-4": {
             "wonail\\scrolltop\\": ""
         }
-    },
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/Wonail/yii2-base.git"
-        }
-    ]
+    }
 }
